@@ -29,11 +29,11 @@ export const Navbar = () => {
         <nav className="w-full bg-[#172937] border-b border-[#E3C485]">
             <div className="flex mx-auto justify-between items-center max-w-6xl p-6 ">
                 <div>
-                    <NavLink to='/Home' className='text-[#E3C485] font-black text-md font-cinzel xs:text-xl sm:text-2xl '>Realmatic Archive</NavLink>
+                    <NavLink to='/home' className='text-[#E3C485] font-black text-md font-cinzel xs:text-xl sm:text-2xl '>Realmatic Archive</NavLink>
                 </div>
                 <ul className="hidden lg:flex gap-6">
                     <NavLink 
-                        to='/Home'
+                        to='/home'
                         className={getNavLinkClass} 
                         >Home
                     </NavLink>
@@ -85,7 +85,7 @@ export const Navbar = () => {
             {menuOpen && (
                 <ul className="lg:hidden flex flex-col items-center gap-4 py-4 border-t border-[#E3C485] bg-[#172937]">
                     <NavLink 
-                        to='/Home'
+                        to='/home'
                         className={getNavLinkClass}
                         onClick={() => setMenuOpen(false)} 
                         >Home
