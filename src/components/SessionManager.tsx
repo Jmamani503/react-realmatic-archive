@@ -3,7 +3,6 @@ import supabase from "../helpers/api";
 import { AuthManager } from "../features/auth/pages/AuthManager";
 import { useModalContext } from "./Modal/context/ModalContext";
 import { useUserStore } from "../store/useUserStore";
-import { NavLink } from "react-router-dom";
 
 export const SessionManager = () => {
 
@@ -30,11 +29,6 @@ export const SessionManager = () => {
     removeUserinfo()
     setOpen(false)
   };
-
-  const getNavLinkClass = ({ isActive }: { isActive: boolean }): string =>
-    `font-semibold font-cinzel text-lg  hover:text-[#E3C485] transition duration-300 ease-and-out ${
-      isActive ? "text-[#E3C485]" : "text-[#FAF5DE]"
-  }`
 
   const openModal = () => {
     setContent(<AuthManager />)

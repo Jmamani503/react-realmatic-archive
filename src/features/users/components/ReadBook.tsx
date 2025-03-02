@@ -1,6 +1,5 @@
 import { useGetReadBooks } from "@/features/users/services/useGetReadBooks"
 import { Book } from "@/models/book"
-import { useUserStore } from "@/store/useUserStore"
 import { useEffect, useState } from "react"
 import { useUpdateReadBooks } from "../services/useUpdateReadBooks"
 import { LoadingIcon } from "@/components/icons/LoadingIcon"
@@ -10,7 +9,6 @@ interface Props {
 }
 
 export const ReadBook = ({user_id}: Props) => {
-    const { userinfo } = useUserStore()
     const { data, loading } = useGetReadBooks(user_id)
     const { loading: loaddingUpdate, updateReadBooks }  = useUpdateReadBooks()
     const [updatedBooks, setUpdatedBooks] = useState<Book[]>([]);
